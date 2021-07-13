@@ -12,4 +12,4 @@ jobs:
   - stage: push image to docker hub
     script:
     - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
-    - docker push $DOCKER_USERNAME/spinkub-demo-v2
+    - docker push $DOCKER_USERNAME/spinkub-demo-v2 --all-tags
